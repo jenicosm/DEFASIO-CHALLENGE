@@ -1,0 +1,220 @@
+:root{
+    --color-primario: #fffbdd;
+    --color-secundario: #f18422;
+    --color-terciario: #f18422;
+    --color-cuarto: #f18422;
+    --color-indicacion: #545454;
+    --color-notificacion: #343A40;
+    --color-hover: #de5826;
+    --color-neutro: #ffffff;
+
+    --fuente-inter: "Inter", sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    background-color: var(--color-neutro);
+    padding: 24px 0px;
+}
+
+.presentación{
+    display: flex;
+    padding: 3% 3%;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.espacio_principal{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.mi_logo{
+    width: 15%;
+    height: auto;
+}
+
+
+.espacio__texto{
+    width: 75%;
+    height: 100%;
+    padding: 0% 0% 0% 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+textarea{
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-secundario);
+    font-family: var(--fuente-inter);
+    font-size: 32px;
+}
+
+textarea::placeholder{
+    color: var(--color-secundario);
+}
+
+.especificaciones{
+    color: var(--color-indicacion);
+    font-family: var(--fuente-inter);
+    padding: 0% 0% 2%;
+    font-size: 20px;
+}
+
+.botones_encriptar{
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    align-items: center;
+    margin-top: auto;
+    padding-bottom: 32px;
+}
+
+button {
+    padding: 24px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: var(--fuente-inter);
+    width: 328px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_encriptación{
+    background-color: var(--color-secundario);
+    color: var(--color-neutro);
+}
+
+button:hover{
+    border: 2px solid var(--color-secundario);
+    background-color: var(--color-hover);
+    color: var(--color-neutro);
+}
+
+.btn_desencriptación{
+    border: 2px solid var(--color-notificacion);
+    background-color: var(--color-indicacion);
+    color: var(--color-neutro);
+}
+
+.resultado_space {
+    width: 400px;
+    flex-grow: 1;
+    background-color: var(--color-cuarto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 32px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    padding: 32px;
+}
+
+.resultado_mostrar {
+    display: none; 
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 150px);
+    padding-bottom: 32px;
+}
+
+.resultado_hecho {
+    margin-bottom: auto; 
+    text-align: left;
+    overflow-wrap: break-word;
+    width: 100%;
+    font-size: 24px;
+    font-family: var(--fuente-inter);
+    color: var(--color-indicacion);
+
+}
+
+.btn-copiar {
+    display: none;
+    width: 336px;
+    background-color: transparent;
+    border: 2px solid var(--color-secundario);
+    color: var(--color-secundario);
+    padding: 0% 0% 50px;
+}
+
+.buscar{
+    width: 70%;
+    height: auto;
+    padding: 0% 0% 32px;
+}
+
+.mensaje_emergente{
+    padding: 0% 0% 16px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--fuente-inter);
+    color: var(--color-notificacion);
+}
+
+.inputtext{
+    font-size: 16px;
+    font-family: var(--fuente-inter);
+    color: var(--color-neutro);
+}
+
+.footer{
+    width: 100%;
+    background-color: var(--color-notificacion);
+    padding: 24px 0px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+@media (max-width: 768px) { /* Cambia el 768px por el ancho que desees para tabletas y móviles */
+    .presentacion {
+        flex-direction: column;
+    }
+    
+    .campo_principal, .espacio_resultado {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .espacio_resultado {
+        margin-top: 20px; /* Espacio entre los dos contenedores en pantallas más pequeñas */
+    }
+
+    .buscando {
+        display: none; /* Oculta la imagen buscando en pantallas pequeñas */
+    }
+}
+
+

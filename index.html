@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador de texto by Nicole Solis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <footer class="header">
+        <img src="./imagenes/nicoslogo.png" alt="mi logo" class="mi_logo">
+    </footer>
+        <main class="presentación">
+            <section class="espacio_principal">
+                
+                <div class="espacio__del__texto">
+                    <textarea name="texto" id="tex_camp" placeholder="Ingrese tu texto aquí..."></textarea>
+                    <p class="especificaciones"> <i class="fas fa-info-circle"></i>Se aceptan sólo letras minúsculas y sin acentos</p>
+                    <div class="botones_encriptar">
+                        <button class="btn_encriptación">Encriptar</button>
+                        <button class="btn_desencriptación">Desencriptar</button>
+                    </div>
+                </div>
+
+            </section>
+            <div class="resultado_space">
+                <img src="./imagenes/lupa buscar.png" alt="buscando mensaje" class="buscar">
+                <h2 class="mensaje_emergente">Ningún mensaje fue encontrado</h2>
+                <p class="inputtext">Indica qué texto que deseas encriptar o desencriptar</p>
+                <div class="mostrar_resultado">
+                    <p id="resultado_mostrar" class="resultado_hecho"></p>
+                    <button id="btn_copiado" class="btn_copiar">Copiar</button>
+                </div>
+            </div>
+        </main>
+    <footer class="footer">
+        <p>Nicole Solis, Smart Desings | Todos los derechos reservados | 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
